@@ -1,109 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Free QR Code Generator | Create QR Codes Instantly</title>
-  <meta name="description" content="Generate free, customizable QR codes for URLs, text, WiFi, business cards, and more. No signup required. Fast, secure, and mobile-friendly.">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body {
-      font-family: Arial,sans-serif;
-      max-width: 480px;
-      margin: 40px auto;
-      padding: 24px;
-      background: #f6f8fa;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-      border-radius: 8px;
-    }
-    h1 {text-align: center; color: #222;}
-    .row { display: flex; gap: 16px; margin-bottom: 12px; align-items: center;}
-    .color-picker { display: flex; gap: 8px; align-items: center;}
-    button {
-      background: #2d89ef; color: #fff; border: none; padding: 10px 24px;
-      font-size: 1rem; border-radius: 4px; cursor: pointer; margin-right: 8px;
-    }
-    button:disabled { opacity: 0.5; cursor: not-allowed;}
-    #qrcode { margin: 20px auto; display: flex; justify-content: center; background: #fff; border-radius: 8px; padding: 16px; min-height: 128px;}
-    .download-btn { background: #38b000; margin-top: 12px;}
-    .footer { text-align: center; color: #888; margin-top: 32px; font-size: 0.95em;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+        /* Add your styles here */
+    </style>
 </head>
 <body>
-  <h1>Free QR Code Generator</h1>
-  <label for="qrInput">Text or URL:</label>
-  <input type="text" id="qrInput" placeholder="Enter text or URL here" autofocus>
-  <div class="row">
-    <div>
-      <label for="qrSize">Size:</label>
-      <select id="qrSize">
-        <option value="128">Small (128px)</option>
-        <option value="256" selected>Medium (256px)</option>
-        <option value="512">Large (512px)</option>
-      </select>
-    </div>
-    <div class="color-picker">
-      <label for="qrFgColor">FG:</label>
-      <input type="color" id="qrFgColor" value="#FF00FC">
-      <label for="qrBgColor">BG:</label>
-      <input type="color" id="qrBgColor" value="#ffffff">
-    </div>
-  </div>
-  <button onclick="generateQRCode()">Generate QR Code</button>
-  <button id="downloadBtn" class="download-btn" onclick="downloadQRCode()" disabled>Download</button>
-  <div id="qrcode"></div>
-  <div class="footer">Made with <span style="color: #FF00FC;">&#x1F499;</span> by LokiSwingstyle</div>
-  <!-- Correct CDN version for qr-code-styling -->
-  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0/lib/qr-code-styling.js"></script>
-  <script>
-    let qrCode = null;
-
-    function generateQRCode() {
-      const text = document.getElementById('qrInput').value.trim();
-      const size = parseInt(document.getElementById('qrSize').value, 10);
-      const fgColor = document.getElementById('qrFgColor').value;
-      const bgColor = document.getElementById('qrBgColor').value;
-      const qrDiv = document.getElementById('qrcode');
-      qrDiv.innerHTML = '';
-      document.getElementById('downloadBtn').disabled = true;
-      if (!text) return;
-
-      qrCode = new QRCodeStyling({
-        width: size,
-        height: size,
-        data: text,
-        dotsOptions: {
-          color: fgColor,
-          type: "square"
-        },
-        backgroundOptions: {
-          color: bgColor,
-          shape: "rectangle"
-        },
-        cornersSquareOptions: {
-          color: fgColor,
-          type: "extra-rounded"
-        },
-        cornersDotOptions: {
-          color: fgColor
-        }
-      });
-
-      qrCode.append(qrDiv);
-
-      setTimeout(() => {
-        document.getElementById('downloadBtn').disabled = false;
-      }, 600);
-    }
-
-    function downloadQRCode() {
-      if (qrCode) {
-        qrCode.download({ name: "qr-code", extension: "png" });
-      }
-    }
-
-    document.getElementById('qrInput').addEventListener('keyup', function(e) {
-      if (e.key === 'Enter') generateQRCode();
-    });
-  </script>
+    <h1>QR Code Generator</h1>
+    <!-- AdSense integration -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3266152370277591"
+         data-ad-slot="YOUR_AD_SLOT"
+         data-ad-format="auto"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <!-- Your QR code generation logic here -->
 </body>
 </html>
