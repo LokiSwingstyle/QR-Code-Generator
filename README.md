@@ -1,5 +1,4 @@
-# QR-Code-Generator
-QR Code Generator
+[index_Version16 (1).html](https://github.com/user-attachments/files/22247483/index_Version16.1.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
